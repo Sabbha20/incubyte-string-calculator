@@ -12,3 +12,8 @@ class TestStringCalculator(unittest.TestCase):
     def test_comma_separated_num_string(self):
         self.assertEqual(add("2,3"), 5)
         self.assertEqual(add("3, 4"), 7)
+        self.assertEqual(add("3, 4, 5, 6"), 18)
+
+    def test_newline_num_string(self):
+        self.assertEqual(add("1\n2,3"), 6)
+        self.assertEqual(add("2,3\n4"), 9)

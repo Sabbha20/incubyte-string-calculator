@@ -40,4 +40,4 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_any_length_delimiters(self):
         self.assertEqual(add("//[***]\n1***2***3"), 6)
-        self.assertEqual(add("//[***]4\n1***2***3"), 10)
+        self.assertEqual(add("//[***]\n1***2***3***4"), 10)

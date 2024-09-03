@@ -8,3 +8,7 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_single_num_string(self):
         self.assertEqual(add("1"), 1)
+
+    def test_comma_separated_num_string(self):
+        self.assertEqual(add("2,3"), 5)
+        self.assertEqual(add("3, 4"), 7)

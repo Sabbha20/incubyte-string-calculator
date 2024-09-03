@@ -10,4 +10,8 @@ def add(numbers: str) -> int:
             num_lst = numbers.split(delimiter)
         else:
             num_lst = re.split(",|\n|;", numbers)
-        return sum(int(num) for num in num_lst)
+
+    nve_num = [num for num in num_lst if int(num) < 0]
+    if nve_num:
+        raise ValueError(f"negative numbers not allowed {(', ').join(nve_num)}")
+    return sum(int(num) for num in num_lst)

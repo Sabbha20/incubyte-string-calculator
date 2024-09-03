@@ -34,3 +34,6 @@ class TestStringCalculator(unittest.TestCase):
             add("-2\n-3;4;-1")
         self.assertEqual(str(ctx.exception),
                          "negative numbers not allowed -2, -3, -1")
+
+    def test_ignore_large_num_str(self):
+        self.assertEqual(add("2,1001"), 2)

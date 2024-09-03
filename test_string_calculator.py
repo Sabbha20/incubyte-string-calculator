@@ -17,3 +17,7 @@ class TestStringCalculator(unittest.TestCase):
     def test_newline_num_string(self):
         self.assertEqual(add("1\n2,3"), 6)
         self.assertEqual(add("2,3\n4"), 9)
+        
+    def test_new_delimiter_input(self):
+        self.assertEqual(add("//;\n1;2"), 3)
+        self.assertEqual(add("2;3\n4;1"), 10)

@@ -14,4 +14,7 @@ def add(numbers: str) -> int:
     nve_num = [num for num in num_lst if int(num) < 0]
     if nve_num:
         raise ValueError(f"negative numbers not allowed {(', ').join(nve_num)}")
-    return sum(int(num) for num in num_lst)
+
+    num_lst = [int(num) for num in num_lst if int(num) < 1000]
+
+    return sum(num_lst)

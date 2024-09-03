@@ -20,4 +20,4 @@ class TestStringCalculator(unittest.TestCase):
         
     def test_new_delimiter_input(self):
         self.assertEqual(add("//;\n1;2"), 3)
-        self.assertEqual(add("2;3\n4;1"), 10)
+        self.assertEqual(add("//;\n2;3;4;1"), 10)
